@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: docker build . -t jonny5592/nest-app
-    - run: echo "${{secrets.DOCKER_HUB_PASSWORD}}" | docker login -u ${{secrets.DOCKER_HUB_USERNAME}} --password stdin
+    - run: echo "${{secrets.DOCKER_HUB_PASSWORD}}" | docker login -u ${{secrets.DOCKER_HUB_USERNAME}} --password-stdin
     - run: docker push jonny5592/nest-app:latest
     
